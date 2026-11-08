@@ -1,0 +1,25 @@
+month,province,district,settlement_type,latitude,longitude,language_code,language_name,channel,content_type,interactions,query_success_rate_pct,unresolved_query_rate_pct,accessibility_issues_reported,sentiment_score_minus1_to_1,assistive_feature_usage_pct,priority_improvement_area
+2026-05,Manicaland,Chipinge,Rural,-20.19,32.62,sn,Shona,Voice line,Clinic finder,776,65.2,27.6,11,0.57,12.1,Translation quality
+2026-05,Manicaland,Chipinge,Rural,-20.19,32.62,nd,Ndebele,Community kiosk,Health information,900,59.6,22.0,16,0.49,12.3,Response time
+2026-05,Manicaland,Chipinge,Rural,-20.19,32.62,en,English,WhatsApp bot,Appointment reminders,1057,59.7,38.1,15,0.26,11.4,Translation quality
+2026-05,Manicaland,Mutare,Urban,-18.97,32.67,sn,Shona,WhatsApp bot,Clinic finder,215,59.5,18.6,24,0.17,25.1,Response time
+2026-05,Manicaland,Mutare,Urban,-18.97,32.67,nd,Ndebele,WhatsApp bot,Clinic finder,821,74.9,32.0,7,0.65,17.0,Simpler wording
+2026-05,Manicaland,Mutare,Urban,-18.97,32.67,en,English,Voice line,Clinic finder,636,84.4,36.6,28,0.62,25.0,Response time
+2026-05,Matabeleland North,Lupane,Rural,-18.93,27.81,sn,Shona,WhatsApp bot,Clinic finder,1036,67.6,32.6,32,0.63,16.2,Response time
+2026-05,Matabeleland North,Lupane,Rural,-18.93,27.81,nd,Ndebele,WhatsApp bot,Appointment reminders,987,79.6,15.4,31,0.29,29.9,Response time
+2026-05,Matabeleland North,Lupane,Rural,-18.93,27.81,en,English,Community kiosk,Appointment reminders,257,77.5,15.2,12,0.17,12.8,Response time
+2026-05,Matabeleland South,Gwanda,Rural,-20.94,29.0,sn,Shona,Voice line,Appointment reminders,871,66.2,23.9,13,0.31,18.5,Simpler wording
+2026-05,Matabeleland South,Gwanda,Rural,-20.94,29.0,nd,Ndebele,WhatsApp bot,Appointment reminders,424,78.9,17.1,6,0.5,30.6,Translation quality
+2026-05,Matabeleland South,Gwanda,Rural,-20.94,29.0,en,English,WhatsApp bot,Health information,433,58.6,19.8,35,0.35,31.1,Simpler wording
+2026-06,Manicaland,Chipinge,Rural,-20.19,32.62,sn,Shona,Voice line,Appointment reminders,291,80.7,27.5,37,0.59,17.5,Response time
+2026-06,Manicaland,Chipinge,Rural,-20.19,32.62,nd,Ndebele,Community kiosk,Appointment reminders,1060,58.3,39.4,35,0.13,14.9,Simpler wording
+2026-06,Manicaland,Chipinge,Rural,-20.19,32.62,en,English,Voice line,Clinic finder,924,84.4,38.6,19,0.44,16.1,Simpler wording
+2026-06,Manicaland,Mutare,Urban,-18.97,32.67,sn,Shona,WhatsApp bot,Clinic finder,670,75.2,27.4,35,0.64,24.8,Response time
+2026-06,Manicaland,Mutare,Urban,-18.97,32.67,nd,Ndebele,Community kiosk,Health information,843,69.1,25.6,5,0.67,27.9,Translation quality
+2026-06,Manicaland,Mutare,Urban,-18.97,32.67,en,English,Community kiosk,Appointment reminders,376,60.3,22.4,21,0.18,26.3,Voice support
+2026-06,Matabeleland North,Lupane,Rural,-18.93,27.81,sn,Shona,Voice line,Health information,1070,80.9,28.3,7,0.67,18.4,Simpler wording
+2026-06,Matabeleland North,Lupane,Rural,-18.93,27.81,nd,Ndebele,Voice line,Health information,287,61.8,22.9,40,0.26,10.9,Simpler wording
+2026-06,Matabeleland North,Lupane,Rural,-18.93,27.81,en,English,Community kiosk,Clinic finder,502,72.6,22.0,29,0.21,26.4,Voice support
+2026-06,Matabeleland South,Gwanda,Rural,-20.94,29.0,sn,Shona,Voice line,Appointment reminders,691,83.4,22.0,39,0.2,21.4,Simpler wording
+2026-06,Matabeleland South,Gwanda,Rural,-20.94,29.0,nd,Ndebele,WhatsApp bot,Appointment reminders,348,62.4,36.8,37,0.5,25.5,Voice support
+2026-06,Matabeleland South,Gwanda,Rural,-20.94,29.0,en,English,WhatsApp bot,Health information,576,66.2,26.9,20,0.18,31.7,Translation quality
