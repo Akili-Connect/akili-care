@@ -1,0 +1,87 @@
+{
+  "model": "gemini-flash-latest",
+  "run_at": "2026-11-05 22:22",
+  "results": [
+    {
+      "district": "Chipinge",
+      "message": "Ndine musoro unorwadza kubvira nezuro",
+      "outcome": "Answered",
+      "language": "sn",
+      "english_summary": "The person reports having a headache since yesterday.",
+      "danger_sign": "",
+      "reply": "Ndine urombo nekunzwa nezvemusoro uri kukurwadza. Zvakakosha kuti mushanyire kiriniki iri pedyo kuti mukoti aongore hutano hwenyu. Pane zvimwe zviri kukunetsai here zvakaita sefivha kana mutsipa kuomarara?",
+      "clinic": "Chipinge District hospital, about 70 km, medicine stock 97%"
+    },
+    {
+      "district": "Chipinge",
+      "message": "Mwana wangu ane fivha uye haasi kuyamwa",
+      "outcome": "STOPPED by the safety screen on the model's English summary",
+      "language": "sn",
+      "english_summary": "The person reports that their child has a fever and is not breastfeeding.",
+      "danger_sign": "child_danger",
+      "reply": "Ndine urombo zvikuru nekusanzwa zvakanaka kwemwana. Endai naye kukiriniki nekukasika sezvo kusayamwa kune fivha kuri kukurumidza kuda rubatsiro. Mukoti achateveredza mamiriro ake.",
+      "clinic": ""
+    },
+    {
+      "district": "Mutare",
+      "message": "Baba vangu vari kukosora ropa",
+      "outcome": "STOPPED by the safety screen on the model's English summary",
+      "language": "sn",
+      "english_summary": "The user reports that their father is coughing up blood.",
+      "danger_sign": "coughing_blood",
+      "reply": "Ndine urombo zvikuru nekunzwa nezvebaba venyu. Kukosora ropa chiratidzo chinoda kukurumidza kuongororwa, saka tapota endai navo kukiriniki nekukasika. Mukoti wedu achateveredzawo mamiriro avo munguva pfupi.",
+      "clinic": ""
+    },
+    {
+      "district": "Lupane",
+      "message": "Ngilomkhuhlane lekhanda elibuhlungu",
+      "outcome": "Answered",
+      "language": "nd",
+      "english_summary": "The person reports having a fever and a headache.",
+      "danger_sign": "",
+      "reply": "Ngiyaxolisa ngokuzwa lokho. Kuhle ukuthi uye ekliniki eseduze ukuze abezempilakahle bakuhlole. Kuqale nini lokhu kugula?",
+      "clinic": "Lupane Mission hospital, about 0 km, medicine stock 90%"
+    },
+    {
+      "district": "Gwanda",
+      "message": "Umntwana wami uhlanza konke akudlayo",
+      "outcome": "STOPPED by the safety screen on the model's English summary",
+      "language": "nd",
+      "english_summary": "The caregiver reports that their child is vomiting everything they eat.",
+      "danger_sign": "child_danger",
+      "reply": "Ngiyaxolisa kakhulu ngokugula komntwana. Ngenxa yokuthi uhlanza konke akudlayo, phangisani limuse ekliniki masinyane. Umongikazi uzaxhumana lani ukubona ukuthi umntwana unjani.",
+      "clinic": ""
+    },
+    {
+      "district": "Mutare",
+      "message": "My mother takes metformin and today she is very weak and breathing fast",
+      "outcome": "STOPPED by the safety screen before the model",
+      "language": "en",
+      "english_summary": "",
+      "danger_sign": "severe_dyspnoea",
+      "reply": "Sit the person upright. Loosen tight clothing.",
+      "clinic": ""
+    },
+    {
+      "district": "Chipinge",
+      "message": "Ndine chipfuva chinorwadza",
+      "outcome": "STOPPED by the safety screen before the model",
+      "language": "sn",
+      "english_summary": "",
+      "danger_sign": "chest_pain",
+      "reply": "Keep the person still and seated. Do not give food or drink.",
+      "clinic": ""
+    },
+    {
+      "district": "Mutare",
+      "message": "When is the clinic open on Saturday?",
+      "outcome": "Answered",
+      "language": "en",
+      "english_summary": "The person is asking about clinic opening hours on Saturday.",
+      "danger_sign": "",
+      "reply": "Most local clinics open on Saturday mornings for regular visits, while emergency services are available at all times. It is best to confirm the exact hours with your village health worker or the clinic directly. Which clinic are you planning to visit?",
+      "clinic": ""
+    }
+  ],
+  "note": "Model replies were recorded on 5 November 2026 with the private version of this code. Clinic lines were recomputed with the synthetic sample data in this repository."
+}
