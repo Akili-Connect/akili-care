@@ -1,0 +1,107 @@
+{
+  "artefact": "Akili Care data binding schema",
+  "version": "1.1.0",
+  "date": "2026-07-14",
+  "provenance": {
+    "sample_data": "sample_data/ holds synthetic files made by tools/make_sample_data.py. They contain no real facility, patient or programme data.",
+    "production_substitution": "A real deployment would bind health ministry aggregate feeds and pharmacy stock returns through the same fields."
+  },
+  "bindings": {
+    "clinic_routing": {
+      "source": "03_health_access_sample.csv",
+      "key_fields": [
+        "month",
+        "province",
+        "district",
+        "facility_type",
+        "outpatient_visits",
+        "avg_wait_minutes",
+        "essential_medicine_stockout_days",
+        "network_uptime_pct",
+        "referral_completion_pct",
+        "service_pressure_level",
+        "latitude",
+        "longitude"
+      ],
+      "derived_fields": {
+        "stock_level_percentage": {
+          "formula": "(days_in_month - essential_medicine_stockout_days) / days_in_month * 100",
+          "unit": "percent"
+        },
+        "network_status": {
+          "formula": "'active' if network_uptime_pct >= 70 else 'degraded'",
+          "unit": "enum"
+        }
+      },
+      "routing_gate": "stock_level_percentage > 40 AND network_status == 'active' AND staffed == true",
+      "ranking_weights": {
+        "stock": 0.3,
+        "uptime": 0.2,
+        "inverse_wait": 0.15,
+        "referral_completion": 0.15,
+        "inverse_distance": 0.2
+      },
+      "normalisation": {
+        "stock": "S/100",
+        "uptime": "U/100",
+        "wait": "min(W/150, 1)",
+        "distance": "min(D_km/50, 1)"
+      },
+      "refresh": "daily USSD/SMS stock pings from facility staff plus monthly aggregate sync; every recommendation displays a last-verified timestamp"
+    },
+    "language_and_accessibility": {
+      "source": "06_local_language_sample.csv",
+      "key_fields": [
+        "district",
+        "language_code",
+        "channel",
+        "query_success_rate_pct",
+        "unresolved_query_rate_pct",
+        "assistive_feature_usage_pct",
+        "priority_improvement_area",
+        "sentiment_score_minus1_to_1"
+      ],
+      "ui_adaptations": {
+        "tts_rate_multiplier": "0.85 where priority_improvement_area == 'Voice support', else 1.0",
+        "default_modality": "voice-first where assistive_feature_usage_pct >= 20, else text-first with voice toggle",
+        "register": "plain-language phrase pack where priority_improvement_area == 'Simpler wording'",
+        "dialect_tag": {
+          "Chipinge": "sn-ndau",
+          "Mutare": "sn",
+          "Lupane": "nd",
+          "Gwanda": "nd",
+          "default": "district language_code majority"
+        }
+      },
+      "model_feedback_loop": "district unresolved_query_rate_pct is a planned input for prioritising language work"
+    }
+  },
+  "sqlite_cache_tables": {
+    "facility_routing_snapshot": [
+      "facility_id",
+      "district",
+      "facility_type",
+      "stock_level_percentage",
+      "network_status",
+      "avg_wait_minutes",
+      "referral_completion_pct",
+      "lat",
+      "lon",
+      "last_verified_utc"
+    ],
+    "language_profile": [
+      "district",
+      "dialect_tag",
+      "tts_rate",
+      "default_modality",
+      "register"
+    ],
+    "sync_journal": [
+      "entry_id",
+      "payload_sha256",
+      "channel",
+      "status",
+      "created_utc"
+    ]
+  }
+}

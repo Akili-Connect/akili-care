@@ -1,0 +1,2 @@
+# Akili Care runs on Python 3.10+ using the standard library only.
+# No packages are needed to run the demo, the assistant or the tests.
